@@ -1,0 +1,383 @@
+			// Read and process each line in the file
+	std::string line;
+	while (std::getline(inputFile, line)) {
+		// Remove the word "solution" from each line
+		size_t found = line.find("solution");
+		if (found != std::string::npos) {
+			line.erase(found, 9); // 9 is the length of "solution"
+		}
+
+		// Store the numbers in a vector
+		std::istringstream iss(line);
+		std::vector<int> numbers;
+		int number;
+		while (iss >> number) {
+			numbers.push_back(number);
+		}
+
+		// Store the vector of numbers in the main vector
+		numbersVector.push_back(numbers);
+	}
+
+	// Close the file
+	inputFile.close();
+
+//	// Print the vector of numbers (optional)
+//	for (const auto &numbers : numbersVector) {
+//		for (int number : numbers) {
+//			std::cout << number << ' ';
+//		}
+//		std::cout << '\n';
+//	}
+
+	return numbersVector;
+			
+			
+			
+			
+			
+		
+
+					if (att % 2 == 0) {	// si c'est un attribut pair
+
+						if (bin % 2 == 0) {
+							if (bin > tempPair.first) {
+								tempPair.first = bin;
+
+							}
+
+						} else {
+							if (bin < tempPair.second) {
+								tempPair.second = bin;
+							}
+
+						}
+
+					} else {		// si c'est un attribut impair
+
+						if (bin % 2 == 0) { // bin pair
+							if (bin > tempPair.first) {
+								tempPair.first = bin;
+
+							}
+
+						} else {
+							if (bin < tempPair.second) {
+								tempPair.second = bin;
+							}
+
+						}
+
+					}
+
+					
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+						std::pair<int, int> tempPair;
+			tempPair.first = std::numeric_limits<int>::min();
+			tempPair.second = std::numeric_limits<int>::max();
+			
+			
+			
+					if (Solution_closedpattern.at(IndexSol).at(i)
+						>= UniqueValuesSize.at(att).first
+						&& Solution_closedpattern.at(IndexSol).at(i)
+								<= UniqueValuesSize.at(att).second) {
+
+					if (att % 2 == 0) {
+
+						if (Solution_closedpattern.at(IndexSol).at(i) % 2
+								== 0) {
+							if (Solution_closedpattern.at(IndexSol).at(i)
+									> tempPair.first) {
+								tempPair.first = Solution_closedpattern.at(
+										IndexSol).at(i);
+
+							}
+
+						} else {
+							if (Solution_closedpattern.at(IndexSol).at(i)
+									< tempPair.second) {
+								tempPair.second = Solution_closedpattern.at(
+										IndexSol).at(i);
+							}
+
+						}
+
+					} else {
+
+						if (Solution_closedpattern.at(IndexSol).at(i) % 2
+								!= 0) {
+							if (Solution_closedpattern.at(IndexSol).at(i)
+									> tempPair.first) {
+								tempPair.first = Solution_closedpattern.at(
+										IndexSol).at(i);
+
+							}
+
+						} else {
+							if (Solution_closedpattern.at(IndexSol).at(i)
+									< tempPair.second) {
+								tempPair.second = Solution_closedpattern.at(
+										IndexSol).at(i);
+							}
+
+						}
+
+					}
+
+
+
+
+
+				} else {
+					break;
+				}
+
+
+
+
+			}
+
+
+
+
+//			for (int bin = UniqueValuesSize.at(att).first;
+//					bin <= UniqueValuesSize.at(att).second; bin++) {
+//
+//				if (att % 2 == 0) {
+//
+//					if (bin % 2 == 0) {
+//						if (bin > tempPair.first) {
+//							tempPair.first = bin;
+//
+//						}
+//
+//					} else {
+//						if (bin < tempPair.second) {
+//							tempPair.second = bin;
+//						}
+//
+//
+//					}
+//
+//				} else {
+//
+//					if (bin % 2 != 0) {
+//						if (bin > tempPair.first) {
+//							tempPair.first = bin;
+//
+//						}
+//
+//					} else {
+//						if (bin < tempPair.second) {
+//							tempPair.second = bin;
+//						}
+//
+//					}
+//
+//
+//
+//				}
+//
+//			}
+
+			OneIntervalPattern.emplace_back(tempPair);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// code permettant de generer les motifs d'intervalles à travers les motifs
+
+	std::vector<std::vector<int>> BinsPerAtt;
+	std::vector<std::vector<std::pair<int, int>>> Interval_Patterns;
+
+	//1- calculer les bornes pour chaque solution binaire
+	for (int sol = 0; sol < Solution_closedpattern.size(); sol++) {	//parcourir les solutions
+
+		int attribute = 0;
+		
+		for (int Index = 0; Index < Solution_closedpattern.at(sol).size();
+				Index++) {		//parcourir les bins
+			
+			
+			if (Solution_closedpattern.at(sol).at(Index)
+					>= AttributeDelimiter.at(attribute).first
+					&& Solution_closedpattern.at(sol).at(Index)
+							<= AttributeDelimiter.at(attribute).first) {
+				
+
+			}else{
+				attribute++;
+			
+				
+			}
+
+
+
+
+		}
+
+	}
+	
+	
+	
+	
+	
+	
+	
+		for (int bin : Solution_closedpattern.at(IndexSol)) {//parourir les bins
+
+			if (bin >= UniqueValuesSize.at(attribut).first
+					&& bin <= UniqueValuesSize.at(attribut).second) {
+
+				if (attribut % 2 == 0) { // si c'est un attribut pair
+					
+
+
+
+				} else {
+
+				}
+
+
+
+			}
+
+
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//std::vector<std::vector<int>> IS_Binrization(
+//		std::vector<std::vector<int>> dataset,
+//		std::vector<std::vector<int>> transposeddata,
+//		std::vector<std::vector<int>> UniqueValues) {
+//	std::vector<std::vector<int>> IS_data;
+//
+//	for (int i = 0; i < UniqueValues.size(); i++) { //std::vector<int> col : UniqueValues
+//		for (int j = 0; j < UniqueValues.at(i).size(); j++) {  //int value : col
+//			std::vector<int> smallerOrEqual;
+//			std::vector<int> higherOrEqual;
+//
+//			for (int y = 0; y < transposeddata.at(i).size(); y++) {
+//
+//				if (transposeddata.at(i).at(y) <= UniqueValues.at(i).at(j)) {
+//					smallerOrEqual.push_back(1);
+//				} else {
+//					smallerOrEqual.push_back(0);
+//				}
+//
+//				if (transposeddata.at(i).at(y) >= UniqueValues.at(i).at(j)) {
+//					higherOrEqual.push_back(1);
+//				} else {
+//					higherOrEqual.push_back(0);
+//				}
+//
+//			}
+//
+//			IS_data.push_back(smallerOrEqual);
+//			IS_data.push_back(higherOrEqual);
+//		}
+//
+//	}
+//
+//	return IS_data;
+//}
+
+//std::vector<std::string> writeFeaturesNames(int FeaturesSize) {
+//	std::vector<std::string> mStrings;
+//	for (int i = 0; i < FeaturesSize; ++i) {
+//		mStrings.push_back("m" + std::to_string(i));
+//	}
+//
+//	return mStrings;
+//}
+		
+		
+		
+		
+		
+	
+	
+	

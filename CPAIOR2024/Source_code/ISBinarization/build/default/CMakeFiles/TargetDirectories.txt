@@ -1,0 +1,3 @@
+/home/bekkouc221/Documents/dev/CPP/ISBinarization/build/default/CMakeFiles/rebuild_cache.dir
+/home/bekkouc221/Documents/dev/CPP/ISBinarization/build/default/CMakeFiles/edit_cache.dir
+/home/bekkouc221/Documents/dev/CPP/ISBinarization/build/default/CMakeFiles/ISBinarization.dir

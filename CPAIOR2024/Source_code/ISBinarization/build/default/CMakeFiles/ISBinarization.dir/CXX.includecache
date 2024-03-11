@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bekkouc221/Documents/dev/CPP/ISBinarization/ISBinarization.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+vector
+-
+unordered_set
+-
+algorithm
+-
+set
+-
+vector
+-
+string
+-
+
